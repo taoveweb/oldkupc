@@ -37,9 +37,9 @@ class App extends React.Component {
           </p>
           <hr/>
           <p className="meta">
-            ©2016 轻芒
+            ©2016 偶酷
             <i>·</i>
-            <Link target="_blank" rel="nofollow" to="http://www.miitbeian.gov.cn">粤ICP备16093522号</Link></p>
+            <Link target="_blank" rel="nofollow" to="http://www.miitbeian.gov.cn">闽ICP备16021446</Link></p>
         </footer>
       </div>
     );

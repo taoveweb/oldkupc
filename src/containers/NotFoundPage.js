@@ -5,9 +5,9 @@ const NotFoundPage = () => {
   return (
     <div>
       <h4>
-        404 Page Not Found
+        404
       </h4>
-      <Link to="/"> Go back to homepage </Link>
+      <Link to="/"> 回到首页  </Link>
     </div>
   );
 };

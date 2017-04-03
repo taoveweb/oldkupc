@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
-import {withRouter} from 'react-router';
+import {withRouter,Link} from 'react-router';
 import {bindActionCreators} from 'redux';
 import * as actions from '../actions/fuelSavingsActions';
 
@@ -10,27 +10,27 @@ class Wechat extends React.Component {
 
   }
   componentDidMount(){
-    document.title="轻芒小程序+ · 免费获取自己的小程序";
+    document.title="偶酷小程序+ · 免费获取自己的小程序";
   }
 
 
   render() {
     return (
       <main className="container landing">
-        <div className="jumbotron text-center"><h1>轻芒小程序+</h1><p>免费送给创造好内容的你</p><p><a className="btn btn-primary"
-                                                                                      href="#signup" role="button">预约我的小程序</a>
+        <div className="jumbotron text-center"><h1>偶酷小程序+</h1><p>免费送给创造好内容的你</p><p><Link className="btn btn-primary"
+                                                                                      to="#signup" role="button">预约我的小程序</Link>
         </p></div>
         <section className="row">
           <div className="col-sm-3"><h3>从自媒体到小程序</h3><p>把微信公众号、微博、知乎、简书等等加入到小程序中，无需专门更新内容。</p></div>
           <div className="col-sm-3"><h3>丰富的多媒体支持</h3><p>我们支持的内容类型不光有文章，还可以是图片、音频、视频等。</p></div>
           <div className="col-sm-3"><h3>和读者互动和付费</h3><p>记住用户的账号、让用户发表评论和讨论，以及可以让用户先付费再阅读。</p></div>
-          <div className="col-sm-3"><h3>赏心悦目的设计</h3><p>创造豌豆荚一览和轻芒生活的设计和工程团队，让你的小程序一样赏心悦目。</p></div>
+          <div className="col-sm-3"><h3>赏心悦目的设计</h3><p>创造豌豆荚一览和偶酷生活的设计和工程团队，让你的小程序一样赏心悦目。</p></div>
         </section>
-        <section className="text-center"><p><a href="http://www.wandoujia.com/items/8975885670417054383"
-                                               className="btn">阅读详情 »</a></p></section>
+        <section className="text-center"><Link><Link to=""
+                                               className="btn">阅读详情 »</Link></Link></section>
         <hr/>
         <section className="text-center"><h1>预约</h1><p>完全免费。手续简单，花 3 分钟填这个表就可以。</p></section>
-        <a name="signup" id="sugnup" />
+        <Link name="signup" id="sugnup" />
         <section id="mc_embed_signup">
           <form action="//tumblr.us13.list-manage.com/subscribe/post?u=ded394615e84821476d80e6f4&amp;id=f304e9ef15"
                 method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"

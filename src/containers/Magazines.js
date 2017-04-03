@@ -40,7 +40,7 @@ class Magazines extends React.Component {
         }
       ]
     };
-    document.title="轻芒 · 全部杂志";
+    document.title="偶酷 · 全部杂志";
 
 
   }

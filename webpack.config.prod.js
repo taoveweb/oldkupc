@@ -29,7 +29,7 @@ export default {
   target: 'web', // necessary per https://webpack.github.io/docs/testing.html#compile-and-test
   output: {
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/',
+    publicPath: '',
     filename: '[name].[chunkhash:8].js',
     chunkFilename: "[name].[chunkhash:8].chunk.js"
   },
@@ -73,7 +73,7 @@ export default {
     }),
 
     // Minify JS
-    new webpack.optimize.UglifyJsPlugin({ sourceMap: true }),
+    new webpack.optimize.UglifyJsPlugin({ sourceMap: false }),
 
     new webpack.LoaderOptionsPlugin({
       minimize: true,
@@ -100,7 +100,7 @@ export default {
      // {test: /\.(jpe?g|png|gif)$/i, loader: 'file-loader?name=[name].[ext]'},
       {test: /\.(jpe?g|png|gif|mp3|aac|ogg)$/, loader: "url-loader?limit=8192&name=[name].[hash:8].[ext]"},
       {test: /\.ico$/, loader: 'file-loader?name=[name].[ext]'},
-      {test: /(\.css|\.scss|\.sass)$/, loader: ExtractTextPlugin.extract('css-loader?sourceMap!postcss-loader!sass-loader?sourceMap')}
+      {test: /(\.css|\.scss|\.sass)$/, loader: ExtractTextPlugin.extract('css-loader?sourceMap!postcss-loader!sass-loader?')}
     ]
   }
 };
